@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Salesforce Refresher",
+  "description": "This extension is for use in the event that the Dashboard goes down.",
+  "version": "1.1",
+  "permissions": [
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://na5.salesforce.com/500?fcf=*"],
+      "js": ["reloadpage.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": ["icq.mp3"]
+}
